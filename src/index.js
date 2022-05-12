@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json",
                 },
                 body:
-                    JSON.stringify(createBody(data[i]))
+                    JSON.stringify(createBody(data[i], i + 1))
             }
             fetch("http://localhost:3000/countries", CO).catch(err => console.log(err))
             await delay(1000)
@@ -23,14 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
         new Promise(resolve => setTimeout(resolve, ms))
 
     // Cuts down on unneeded info
-    function createBody(country) {
+    function createBody(country, id) {
         return {
             name: country.name.common,
             capital: country.capital,
             currencies: country.currencies,
             languages: country.languages,
-            popluation: country.popluation,
-            flags: country.flags
+            population: country.population,
+            flags: country.flags,
+            id: id
 
         }
     }
