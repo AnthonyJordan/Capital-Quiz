@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (input.toLowerCase() == countryName.toLowerCase()) {
             appendPoints(10)
             alert("That's right!")
+            document.getElementById("next-round").click()
         } else {
             appendPoints(-5)
             alert("Sorry, guess again!")
