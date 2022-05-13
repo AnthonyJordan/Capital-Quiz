@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const currency = document.getElementById('currency');
         currency.innerText = "Currencies: " + (handleCurrency(country.currencies));
         const languages = document.getElementById('languages');
-        languages.innerText = "Languages: " + (Object.values(country.languages));
+        languages.innerText = "Languages: " + (handleLanguages(country.languages));
         countryName = country.name
         console.log(countryName)
     };
@@ -71,6 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
             currencyArray.push(currencies[key].name)
         }
         return currencyArray.join(", ")
+    }
+
+    function handleLanguages(languages) {
+        const languageArray = []
+        for (const key in languages) {
+            languageArray.push(languages[key])
+        }
+        return languageArray.join(", ")
     }
 
 
