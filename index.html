@@ -19,16 +19,21 @@
     <div>
         <img id="flag-img" src="assets/tmp img.png">
     </div>
-    <h3>Capital City Name</h3>
+    <h3 id="capital">Capital City Name</h3>
     <form id="guess-form">
         <label for="country-name"></label><br>
         <input id="country-name" class="submit" type="text" placeholder="Enter country name here" /><br>
         <input type="submit" class="submit" />
     </form>
+
+    <div><button id="next-round" class="submit">Next Round</button></div>
     <div id="country-info">
-        <p>Country Population</p>
-        <p>Country Currencies</p>
-        <p>Country Languages</p>
+        <p id="population">Country Population</p>
+        <p id="currency">Country Currencies</p>
+        <p id="languages">Country Languages</p>
+        <div id="scoreboard">Scoreboard
+            <p id="score">Current Score: 0</p>
+        </div>
     </div>
 
 </body>
